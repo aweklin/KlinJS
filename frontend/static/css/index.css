@@ -59,3 +59,24 @@ button[type="submit"] {
 label {
     min-width: 100px;
 }
+
+.alert {
+    padding: 0.5rem;
+    color: #fff;
+}
+
+.danger {
+    background-color: red;
+}
+
+.info {
+    background-color: blue;
+}
+
+.success {
+    background-color: green;
+}
+
+.warning {
+    background-color: orange;
+}

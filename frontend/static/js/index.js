@@ -52,15 +52,6 @@ const router = async () => {
 
 window.addEventListener('popstate', router);
 
-// handle form events
-/*document.querySelector('#contactForm').addEventListener('submit', (e) => {
-    const formData = new FormData(e.target);
-
-    e.preventDefault();
-
-    console.log(formData);
-});*/
-
 document.addEventListener('DOMContentLoaded', () => {
     
     document.body.addEventListener('click', e => {
@@ -77,26 +68,13 @@ document.addEventListener('DOMContentLoaded', () => {
             navigateTo(link.getAttribute('href'));
         }
 
-        /*const contactForm = e.target.closest('#contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (formEvent) => {
-                formEvent.preventDefault();
-
-                const formData = new FormData(formEvent.target);
-
-                console.log(formData.get('name'));
-            });
-        }*/
-    });
-
-    const contactForm = document.querySelector('#contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', () => {
+        /*const button = e.target.closest('button[type="submit"]');
+        if (button != null) {
             e.preventDefault();
 
-            console.log('Form submitted.');
-        });
-    }
+            console.log('Button clicked.');
+        }*/
+    });
 
     // invoke router
     router();
